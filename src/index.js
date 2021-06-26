@@ -2,9 +2,10 @@ import getOSDetails from "./general/os";
 import getBrowserDetails from "./general/browser";
 import getScreenDetails from "./general/screen";
 import readCookie from "./general/cookies";
+import getEventDetails from './events';
 
 function createLogger() {
-  const result = {
+  const source = {
     agent: {
       os: getOSDetails(),
       userAgent: navigator.userAgent,
@@ -18,11 +19,20 @@ function createLogger() {
     },
     screen: getScreenDetails(),
   };
+  const user = readCookie(['uuid', 'X-Trace-Id', 'phone_hash']);
   return function (specificDetails) {
+    const { event, ...restItems } = specificDetails;
+    const action = getEventDetails(event);
+    const log = {
+      timestamp: new Date().getTime(),
+    }
     return {
       source: {
-        ...result,
+        ...source,
       },
+      user,
+      action,
+      log,
     };
   };
 }

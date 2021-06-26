@@ -1,6 +1,6 @@
 {
     "name": "logglybin",
-    "version": "0.0.5",
+    "version": "0.0.7",
     "main": "src/index.js",
     "type": "module"
 }
