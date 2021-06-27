@@ -21,10 +21,13 @@ function createLogger() {
   };
   const user = readCookie(['uuid', 'X-Trace-Id', 'phone_hash']);
   return function (specificDetails) {
-    const { event, ...restItems } = specificDetails;
+    const { event, asset = {}, ...restItems } = specificDetails;
     const action = getEventDetails(event);
     const log = {
       timestamp: new Date().getTime(),
+      ext: {
+        ...restItems
+      }
     }
     return {
       source: {
@@ -32,6 +35,7 @@ function createLogger() {
       },
       user,
       action,
+      asset,
       log,
     };
   };
