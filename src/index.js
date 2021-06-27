@@ -3,6 +3,7 @@ import getBrowserDetails from "./general/browser";
 import getScreenDetails from "./general/screen";
 import readCookie from "./general/cookies";
 import getEventDetails from './events';
+import getUrlDetails from "./general/urls";
 
 function createLogger() {
   const source = {
@@ -13,16 +14,13 @@ function createLogger() {
         browser: getBrowserDetails(),
       },
     },
-    app: {
-      name: process.env.REACT_APP_SOURCE || process.env.SOURCE,
-      url: window.location.hostname,
-    },
     screen: getScreenDetails(),
   };
   const user = readCookie(['uuid', 'X-Trace-Id', 'phone_hash']);
   return function (specificDetails) {
     const { event, asset = {}, ...restItems } = specificDetails;
     const action = getEventDetails(event);
+    const url = getUrlDetails();
     const log = {
       timestamp: new Date().getTime(),
       ext: {
@@ -32,6 +30,10 @@ function createLogger() {
     return {
       source: {
         ...source,
+        app: {
+          name: process.env.REACT_APP_SOURCE || process.env.SOURCE,
+          ...url,
+        },
       },
       user,
       action,
