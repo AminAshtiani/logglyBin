@@ -20,6 +20,14 @@
 <dl>
 <dt><a href="#UnknownEvent">UnknownEvent</a> : <code>object</code></dt>
 <dd></dd>
+<dt><a href="#MouseEvent">MouseEvent</a> : <code>object</code></dt>
+<dd></dd>
+<dt><a href="#MouseEvent">MouseEvent</a> : <code>object</code></dt>
+<dd></dd>
+<dt><a href="#KeyboardEvent">KeyboardEvent</a> : <code>object</code></dt>
+<dd></dd>
+<dt><a href="#MultimediaEvent">MultimediaEvent</a> : <code>object</code></dt>
+<dd></dd>
 </dl>
 
 <a name="getClickEventDetails"></a>
@@ -33,7 +41,7 @@ get essential inforamation from click event
 
 | Param | Type |
 | --- | --- |
-| event | <code>MouseEvent</code> |
+| event | [<code>MouseEvent</code>](#MouseEvent) |
 
 <a name="getMultiMediaEventDetails"></a>
 
@@ -46,7 +54,7 @@ get essential inforamation from multimedia event
 
 | Param | Type |
 | --- | --- |
-| event | <code>MultimediaEvent</code> |
+| event | [<code>MultimediaEvent</code>](#MultimediaEvent) |
 
 <a name="getKeyboardEventDetails"></a>
 
@@ -59,7 +67,7 @@ get essential inforamation from keyboard event
 
 | Param | Type |
 | --- | --- |
-| event | <code>KeyboardEvent</code> |
+| event | [<code>KeyboardEvent</code>](#KeyboardEvent) |
 
 <a name="getEventDetails"></a>
 
@@ -77,4 +85,20 @@ detect your event type and call its related function to get event information
 <a name="UnknownEvent"></a>
 
 ## UnknownEvent : <code>object</code>
+**Kind**: global typedef
+<a name="MouseEvent"></a>
+
+## MouseEvent : <code>object</code>
+**Kind**: global typedef
+<a name="MouseEvent"></a>
+
+## MouseEvent : <code>object</code>
+**Kind**: global typedef
+<a name="KeyboardEvent"></a>
+
+## KeyboardEvent : <code>object</code>
+**Kind**: global typedef
+<a name="MultimediaEvent"></a>
+
+## MultimediaEvent : <code>object</code>
 **Kind**: global typedef
