@@ -1,9 +1,17 @@
 /**
- * @typedef {object} MouseEvent
- * @typedef {object} HTMLElement
- * @typedef {object} MultimediaEvent
- * @typedef {object} KeyboardEvent
  * @typedef {object} UnknownEvent
+ */
+/**
+ * @typedef {object} MouseEvent
+ */
+/**
+ * @typedef {object} MouseEvent
+ */
+/**
+ * @typedef {object} KeyboardEvent
+ */
+/**
+ * @typedef {object} MultimediaEvent
  */
 // eslint-disable-next-line valid-jsdoc
 /**
