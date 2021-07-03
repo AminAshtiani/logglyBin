@@ -6,11 +6,8 @@
 
 ### Api Documentation
 
-#### Logger 
-<a href="./documentation/logger.md">Events</a>
+#### <a href="./documentation/logger.md">Logger</a>
 
-#### General 
-<a href="./documentation/general.md">Events</a>
+#### <a href="./documentation/general.md">General</a>
 
-#### Events 
-<a href="./documentation/events.md">Events</a>
+#### <a href="./documentation/events.md">Events</a>
