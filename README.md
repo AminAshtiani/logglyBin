@@ -5,4 +5,4 @@
 ![npm](https://img.shields.io/npm/v/logglybin)
 
 ### Api Documentation
-[Events](documentation/event)
+[Events](documentation/event.md)
