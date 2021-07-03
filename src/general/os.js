@@ -1,3 +1,11 @@
+// eslint-disable-next-line valid-jsdoc
+/**
+ * @function
+ * @author Amin Ashtiani
+ * @name getOSDetails
+ * @description get your Os Detail
+ * @return { String | undefined } return your os name or undefined
+ */
 function getOSDetails() {
   const { userAgent } = navigator;
 

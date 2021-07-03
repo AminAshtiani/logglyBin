@@ -1,3 +1,11 @@
+// eslint-disable-next-line valid-jsdoc
+/**
+ * @function
+ * @author Amin Ashtiani
+ * @name getBrowserDetails
+ * @description get essential information from user agent which is relate to browser
+ * @return {{ browser: String, version: String }} return browser name and its version
+ */
 function getBrowserDetails() {
   const ua = navigator.userAgent;
   let browsersList =
